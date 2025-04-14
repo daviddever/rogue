@@ -238,8 +238,13 @@ tstp(int ignored)
     getyx(curscr, y, x);
     mvcur(y, x, oy, ox);
     fflush(stdout);
+    wmove(curscr, oy, ox);
+/* Changed to wmove for modern ncurses
     curscr->_cury = oy;
     curscr->_curx = ox;
+*/
+    wmove(curscr, oy, ox);
+
 }
 
 /*

@@ -32,6 +32,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Adding for musl
+#define _GNU_SOURCE
+
 #if defined(_WIN32)
 #include <Windows.h>
 #include <Lmcons.h>
